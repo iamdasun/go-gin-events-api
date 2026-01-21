@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS events (
+    id INTEGER AUTOINCREMENT PRIMARY KEY,
+    owner_id INTEGER NOT NULL,
+    name TEXT NOT_NULL,
+    description TEXT NOT NULL,
+    date DATETIME NOT NULL, 
+    location TEXT NOT NULL,
+    FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE
+
+)
