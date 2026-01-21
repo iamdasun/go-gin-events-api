@@ -30,7 +30,7 @@ func main() {
 	}
 
 	m, err := migrate.NewWithDatabaseInstance(
-		"file://./migrations",
+		"file://./cmd/migrate/migrations",
 		"sqlite3",
 		driver,
 	)
